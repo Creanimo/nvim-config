@@ -5,6 +5,10 @@ local opt = vim.opt
 -- OS
 opt.clipboard:append("unnamedplus")
 
+-- spellcheck
+opt.spell = true
+opt.spelllang = { 'de', 'en' }
+
 -- view
 opt.wrap = false
 opt.cursorline = true

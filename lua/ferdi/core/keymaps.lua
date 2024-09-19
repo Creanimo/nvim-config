@@ -2,9 +2,15 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
-keymap.set("i", "jk", "<ESC>", { desc = "Exit inser mode with jk"})
+-- modes
+keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk"})
 
+-- searching
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights"})
+
+-- navigation - simplifying writing texts with soft linebreaks
+keymap.set("n", "j", "gj", { desc = "move down visual line" })
+keymap.set("n", "k", "gk", { desc = "move up visual line" })
 
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
@@ -24,5 +30,8 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 
 -- telescope keymaps
 keymap.set("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<CR>")
+
+-- terminal
+keymap.set('t', '<Esc>', [[<C-\><C-n>]]) -- exit
 
 
