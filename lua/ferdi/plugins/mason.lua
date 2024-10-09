@@ -3,13 +3,16 @@ local M = {
 	dependencies = {
       'williamboman/mason-lspconfig.nvim',
       'nvim-lua/plenary.nvim',
+        'neovim/nvim-lspconfig',
 	},
 }
 
 M.servers = {
 	"lua_ls",
-	"rust_analyzer",
-	"clangd"
+    "pylsp",
+    "pyright",
+    "phpactor",
+    "html"
 }
 
 function M.config()

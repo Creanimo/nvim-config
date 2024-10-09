@@ -9,6 +9,18 @@ opt.clipboard:append("unnamedplus")
 opt.spell = true
 opt.spelllang = { 'de', 'en' }
 
+-- Disable spell checking in terminal buffers
+vim.api.nvim_create_autocmd("TermOpen", {
+    pattern = "term://*",
+    command = "setlocal nospell"
+})
+
+-- Disable spell checking in file tree buffers
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "nerdtree", "NvimTree" },
+    command = "setlocal nospell"
+})
+
 -- view
 opt.wrap = false
 opt.cursorline = true
