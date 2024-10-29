@@ -40,6 +40,11 @@ vim.diagnostic.config({
     },
 })
 
+vim.lsp.handlers['textDocument/signatureHelp']  = vim.lsp.with(vim.lsp.handlers['signature_help'], {
+    border = 'single',
+    close_events = { "CursorMoved", "BufHidden" },
+})
+
 vim.keymap.set('n', '<leader>i', function()
     -- If we find a floating window, close it.
     local found_float = false

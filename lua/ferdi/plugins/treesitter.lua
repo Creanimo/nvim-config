@@ -28,7 +28,7 @@ return {
         "yaml",
         "php",
         "xml",
-        "python",
+        "python",        
         "html",
         "css",
         "prisma",
