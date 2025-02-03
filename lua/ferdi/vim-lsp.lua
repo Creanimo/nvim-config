@@ -61,3 +61,5 @@ vim.keymap.set('n', '<leader>i', function()
 
     vim.diagnostic.open_float(nil, { focus = false, scope = 'cursor' })
 end, { desc = 'Toggle Diagnostics' })
+
+

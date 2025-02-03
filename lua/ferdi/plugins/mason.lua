@@ -12,7 +12,9 @@ M.servers = {
     "pylsp",
     "pyright",
     "phpactor",
-    "html"
+    "html",
+    "biome",
+    "ts_ls",
 }
 
 function M.config()
