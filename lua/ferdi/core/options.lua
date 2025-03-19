@@ -47,3 +47,6 @@ opt.autoindent = true
 -- search settings
 opt.ignorecase = true
 opt.smartcase = true
+
+-- allow local setting overrides with .nvim.lua in a project folder
+vim.o.exrc = true

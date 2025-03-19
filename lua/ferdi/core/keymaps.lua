@@ -30,8 +30,10 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 
 -- telescope keymaps
 keymap.set("n", "<leader>ff", "<cmd>lua require('telescope.builtin').find_files()<CR>")
+keymap.set("n", "<leader>bb", "<cmd>lua require('telescope.builtin').buffers()<CR>")
 
 -- terminal
 keymap.set('t', '<Esc>', [[<C-\><C-n>]]) -- exit
 
-
+--docstring auto parsing
+keymap.set("n", "<Leader>nf", ":lua require('neogen').generate()<CR>", { noremap = true, silent = true })
