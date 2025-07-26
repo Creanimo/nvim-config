@@ -18,5 +18,10 @@ return {
         lspconfig.biome.setup({
             root_dir = lspconfig.util.root_pattern("biome.json", "package.json", ".git"),
         })
+
+        lspconfig.html.setup({
+            filetypes = { "html", "htm", "mustache"},
+        })
+        require("luasnip").filetype_extend("mustache", { "html" })
     end
 }

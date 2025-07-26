@@ -45,6 +45,12 @@ vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers['
     close_events = { "CursorMoved", "BufHidden" },
 })
 
+vim.filetype.add({
+    extension = {
+        mustache = "html.mustache",
+    },
+})
+
 vim.keymap.set('n', '<leader>i', function()
     -- If we find a floating window, close it.
     local found_float = false
@@ -61,5 +67,3 @@ vim.keymap.set('n', '<leader>i', function()
 
     vim.diagnostic.open_float(nil, { focus = false, scope = 'cursor' })
 end, { desc = 'Toggle Diagnostics' })
-
-
